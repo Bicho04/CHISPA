@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
     jQuery("#amazingslider-1").amazingslider({
         jsfolder:jsFolder,
         width:832,
-        height:240,
+        height:300,
         skinsfoldername:"",
         loadimageondemand:false,
         isresponsive:false,
@@ -77,7 +77,7 @@ jQuery(document).ready(function(){
         textbgcss:"display:block; position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:#fff; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; opacity:0.7; filter:alpha(opacity=70);",
         playvideoimagewidth:64,
         bottomshadowimagewidth:110,
-        showtimer:true,
+        showtimer:false,
         navradius:0,
         navshowpreview:true,
         navmarginy:16,
@@ -116,7 +116,7 @@ jQuery(document).ready(function(){
         arrowmargin:-48,
         texteffectduration:1000,
         bottomshadowimage:"bottomshadow-110-95-0.png",
-        border:1,
+        border:0,
         timerposition:"bottom",
         navfontcolor:"#333333",
         navthumbnavigationstyle:"arrow",
@@ -145,6 +145,64 @@ jQuery(document).ready(function(){
             effects:"up,down,updown",
             slicecount:10
         },
-        transition:"slice"
+        blocks: {
+            columncount:5,
+            checked:true,
+            rowcount:5,
+            effects:"topleft,bottomright,top,bottom,random",
+            duration:1500,
+            easing:"easeOutCubic"
+        },
+        slide: {
+            duration:1000,
+            easing:"easeOutCubic",
+            checked:true
+        },
+        crossfade: {
+            duration:1000,
+            easing:"easeOutCubic",
+            checked:true
+        },
+        threedhorizontal: {
+            checked:true,
+            bgcolor:"#222222",
+            perspective:1000,
+            slicecount:1,
+            duration:1500,
+            easing:"easeOutCubic",
+            fallback:"slice",
+            scatter:5,
+            perspectiveorigin:"bottom"
+        },
+        fade: {
+            duration:1000,
+            easing:"easeOutCubic",
+            checked:true
+        },
+        shuffle: {
+            duration:1500,
+            easing:"easeOutCubic",
+            columncount:5,
+            checked:true,
+            rowcount:5
+        },
+        threed: {
+            checked:true,
+            bgcolor:"#222222",
+            perspective:1000,
+            slicecount:5,
+            duration:1500,
+            easing:"easeOutCubic",
+            fallback:"slice",
+            scatter:5,
+            perspectiveorigin:"right"
+        },
+        blinds: {
+            duration:2000,
+            easing:"easeOutCubic",
+            checked:true,
+            slicecount:3
+        },
+        transition:"slice,blocks,slide,crossfade,threedhorizontal,fade,shuffle,threed,blinds"
     });
 });
